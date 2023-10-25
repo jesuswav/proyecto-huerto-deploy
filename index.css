@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Share+Tech+Mono&family=VT323&display=swap");
+
+body {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow-x: visible;
+
+  font-family: "Roboto", sans-serif;
+}
+.main-container {
+  width: 98%;
+  height: 100%;
+
+  margin-top: 60px;
+}
+.navbar {
+  z-index: 10;
+  width: 100%;
+  height: 82px;
+
+  position: fixed !important;
+  overflow-y: scroll;
+  overflow: hidden;
+  top: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: centers;
+  justify-content: space-between;
+  margin-left: -10px;
+  border-bottom: 1px solid black;
+  background: white;
+}
+.navbar .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: centers;
+  justify-content: center;
+  margin-left: 10px;
+}
+.navbar .logo img {
+  height: 60px;
+  margin: 0 8px 0 0;
+}
+.navbar .options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px;
+}
+.navbar .options img {
+  height: 40px;
+  margin: 6px;
+}
+.navbar .options img:hover {
+  cursor: pointer;
+}
+.navbar .nav-menu-center {
+  display: none;
+}
+.nav-menu-container {
+  z-index: 10;
+
+  position: fixed !important;
+  overflow-y: scroll;
+  overflow: hidden;
+  bottom: 0;
+
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 20px 0;
+  margin: 0px 0 0 -8px;
+  background: white;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.815);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.144);
+}
+.nav-menu-container .nav-menu-center-mobile {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+}
+.nav-menu-container div p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(109, 109, 109);
+  /* padding: 1px 5px; */
+  margin: 15px 8px 0px 8px;
+  /* border: 2px solid rgb(141, 141, 141); */
+  border-radius: 8px;
+}
+.pushed {
+  padding: 4px 8px;
+  position: relative;
+  background: rgb(223, 223, 223);
+  border: 2px solid rgb(15, 15, 15);
+  transition: 0.05s ease-in 0.01s;
+}
+
+#menu-container {
+  z-index: 10;
+
+  position: fixed !important;
+  overflow-y: scroll;
+  overflow: hidden;
+  top: 8%;
+
+  margin-top: 20px;
+  width: 99%;
+  height: 91vh;
+  background: white;
+  position: absolute;
+
+  margin-left: -7px;
+
+  transition: 0.2s ease-in;
+}
+.menu-content {
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.2s ease-in;
+}
+.menu-option-container div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  margin: 0 0 0 25px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.438);
+  width: 85%;
+}
+.menu-option-container div a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 20px 5px;
+  margin: -10px;
+}
+.menu-option-container div img {
+  height: 28px;
+  margin: 20px 15px 20px 10px;
+}
+.contacto-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.contacto-container div a {
+  text-decoration: none;
+  color: black;
+}
+.contacto {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 2px solid black;
+  width: 88%;
+}
+.contacto img {
+  height: 30px;
+  margin: 10px;
+}
+.data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  height: 100%;
+  margin-top: 2px;
+
+  margin-bottom: 72px;
+}
+.data-subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 100%;
+}
+.data-name-subcontainer {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.data-subcontainer .data-name-container {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 68px;
+  margin: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 30px;
+}
+.data-name-subcontainer img {
+  height: 40px;
+  margin: 10px;
+}
+.data-subcontainer .data-number {
+  color: black;
+  font-size: 42px;
+  font-family: "Share Tech Mono", monospace;
+}
+.notification-container {
+  width: 94%;
+  height: 100%;
+  margin: 30px -20px;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+.notification-container div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin: 15px;
+}
+.notification-container div img {
+  height: 30px;
+  margin: 0 10px 0 10px;
+}
+
+/* Styles for porfile-info ------------------- */
+#porfile-info {
+  z-index: 10;
+
+  position: fixed !important;
+  overflow-y: scroll;
+  overflow: hidden;
+  top: 10%;
+
+  width: 100%;
+  height: 91vh;
+  margin-left: -8px;
+
+  position: absolute;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.2s ease-in;
+}
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer img {
+  width: 25px;
+  padding: 0px 10px;
+}
+.header {
+  background-color: #f2f2f2;
+  padding: 10px;
+  /* Estilos adicionales para la barra superior */
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 90%; /* Ancho ajustado */
+  max-width: 600px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.content .user-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.content .user-info div {
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+  /* Estilos adicionales para la barra inferior */
+}
+
+#usuario {
+  width: 90px;
+  margin-right: 20px;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+@media (min-width: 800px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: -8px;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+  }
+  .navbar h1 {
+    font-size: 25px;
+  }
+  .navbar .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  .navbar .logo img {
+    height: 34px;
+    margin: 0 8px 0 0;
+  }
+  .nav-menu-center a {
+    text-decoration: none;
+  }
+  .navbar .options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 6px 10px 6px 6px;
+  }
+  .navbar .options img {
+    height: 30px;
+    margin: 8px 10px 0 10px;
+  }
+  .navbar .nav-menu-center {
+    display: flex;
+    justify-content: space-between;
+    width: 278px;
+    margin-top: 12px;
+  }
+  .navbar .nav-menu-center p {
+    text-decoration: none;
+    color: black;
+  }
+  .navbar .nav-menu-center p:hover {
+    cursor: pointer;
+  }
+  .nav-menu-container {
+    display: none;
+  }
+
+  .main-container {
+    width: 98%;
+    height: 100%;
+
+    margin-top: 60px;
+  }
+
+  #menu-container {
+    margin-top: 20px;
+    width: 300px;
+    height: 500px;
+    background: white;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px 10px;
+    overflow: hidden;
+
+    transition: 0.2s ease-in-out;
+  }
+  .menu-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-option-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+    margin: 0 0 0 25px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.438);
+    width: 85%;
+  }
+  .menu-option-container div img {
+    height: 28px;
+    margin: 20px 15px 20px 10px;
+  }
+  .menu-option-container div a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 20px 5px;
+    margin: -10px;
+  }
+  .contacto-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .contacto-container div a {
+    text-decoration: none;
+    color: black;
+    padding: 15px 15px 15px 0;
+  }
+  .contacto {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.521);
+    width: 68%;
+  }
+  .contacto img {
+    height: 30px;
+    margin: 10px;
+  }
+
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 100%;
+    margin: 32px;
+  }
+  .data-subcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 100%;
+  }
+
+  /* Styles for porfile-info ------------------- */
+  #porfile-info {
+    width: 300px;
+    height: 340px;
+
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: 0.2s ease-in;
+  }
+  .footer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .footer img {
+    margin: 4px;
+    width: 25px;
+  }
+  .header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    /* Estilos adicionales para la barra superior */
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 90%; /* Ancho ajustado */
+    max-width: 600px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+
+  .content .user-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .content .user-info div {
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    /* Estilos adicionales para la barra inferior */
+  }
+
+  #usuario {
+    width: 90px;
+    margin-right: 20px;
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 100%;
+  /* transition: 0.2s ease-in; */
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0%;
+  /* transition: 0.2s ease-in-out; */
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+.visible-nav {
+  display: block;
+}
+.hidden-nav {
+  display: none;
+}
+
+.border-bottom {
+  padding: 4px 30px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  transition: 0.2s ease-in 0.03s;
+
+  /* border-radius: 6px;
+  background-color: rgb(238, 238, 238);
+  transition: 0.1s ease-in 0.01s; */
+}
